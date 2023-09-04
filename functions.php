@@ -29,5 +29,5 @@ function custom_post_type() {
 }
 
 add_action('init', 'custom_post_type');
-
+wp_enqueue_style( 'style', get_stylesheet_uri() );
  ?>
