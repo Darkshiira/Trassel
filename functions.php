@@ -1,11 +1,12 @@
 <?php
 wp_enqueue_style( 'style', get_template_directory_uri() . '/hannas-style.css' );
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+wp_enqueue_style( 'tess-style', get_template_directory_uri() . '/tess-style.css' );
 ?>
 
 <?php 
 
-wp_enqueue_style( 'style', get_stylesheet_uri() );
-wp_enqueue_style( 'tess-style', get_stylesheet_uri() );
+
 function custom_post_type() {
     $labels = array(
         'name'               => _x('Pricelist', 'post type general name'),
