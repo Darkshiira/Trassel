@@ -1,4 +1,7 @@
 <?php 
+
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+wp_enqueue_style( 'tess-style', get_stylesheet_uri() );
 function custom_post_type() {
     $labels = array(
         'name'               => _x('Pricelist', 'post type general name'),
@@ -29,5 +32,5 @@ function custom_post_type() {
 }
 
 add_action('init', 'custom_post_type');
-wp_enqueue_style( 'style', get_stylesheet_uri() );
+
  ?>
