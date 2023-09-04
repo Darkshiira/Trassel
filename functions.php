@@ -1,3 +1,7 @@
+<?php
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+?>
+
 <?php 
 function custom_post_type() {
     $labels = array(
@@ -22,7 +26,6 @@ function custom_post_type() {
         'has_archive'   => true,
         'menu_position' => 5,
         'supports'      => array('title','custom-fields')
-        // Add more arguments as needed
     );
 
     register_post_type('custom_post', $args);
@@ -31,3 +34,28 @@ function custom_post_type() {
 add_action('init', 'custom_post_type');
 
  ?>
+
+ <?php 
+ function theme_register_widget_areas() {
+    register_sidebar(array(
+        'name' => 'Homepage Sidebar', 
+        'id' => 'homepage-sidebar',
+        'description' => 'Add widgets here for the homepage.',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+}
+
+add_action('widgets_init', 'theme_register_widget_areas');
+    ?>
+    
+    <?php 
+    function theme_register_menus() {
+        register_nav_menus(array(
+            'primary' => 'Primary Menu',
+            'footer' => 'Footer Menu',
+        ));
+    }
+    ?>
