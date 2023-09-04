@@ -7,7 +7,7 @@ $args = array(
 $custom_query = new WP_Query($args);
 ?>
 
-<table>
+<table id="pricelist">
     <thead>
         <tr>
             <th>Method</th>
