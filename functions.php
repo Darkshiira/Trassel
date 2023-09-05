@@ -73,3 +73,33 @@ function theme_register_menus()
     );
 }
 ?>
+
+<?php 
+
+function theme_footer_contact_customizer_settings($wp_customize) {
+    $wp_customize->add_section('footer_contact_section', array(
+        'title'    => __('Footer Contact Info', 'textdomain'),
+        'priority' => 120,
+    ));
+
+    $contact_settings = array(
+        'footer_address_setting' => 'Default Address',
+        'footer_email_setting'   => 'support@example.com',
+        'footer_phone_setting'   => '+(012)345-6789',
+        'footer_time_setting'    => 'Mon to Fri 8:00-5:00'
+    );
+
+    foreach ($contact_settings as $key => $default) {
+        $wp_customize->add_setting($key, array(
+            'default'   => $default,
+            'transport' => 'refresh',
+        ));
+        $label = ucwords(str_replace(array("footer_", "_setting"), "", $key));
+        $wp_customize->add_control($key, array(
+            'label'    => $label,
+            'section'  => 'footer_contact_section',
+            'type'     => 'text'
+        ));
+    }
+}
+add_action('customize_register', 'theme_footer_contact_customizer_settings');
