@@ -53,6 +53,8 @@ body.page-template-default article h2 {
 body.page-template-default article {
     background-color: #c7c7c7;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem;
+    box-sizing: border-box
 }
 
 body.page-template-default article h2 {
@@ -71,6 +73,7 @@ body.page-template-default article h2 {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 3rem;
+    justify-content: center;
 }
 
 .wp-block-latest-posts li {
@@ -79,6 +82,11 @@ body.page-template-default article h2 {
     border: 1px solid black;
     background-color: #454545 ;
     color:white;
+    max-width: 333px;
+    min-width: 333px;
+    overflow:hidden;
+
+    
 }
 
 body.home.blog{

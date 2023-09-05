@@ -73,8 +73,10 @@ function theme_register_menus()
         )
     );
 }
-?>
 
+add_action('init', 'theme_register_menus');
+
+?>
 <?php 
 
 function theme_footer_contact_customizer_settings($wp_customize) {
@@ -148,5 +150,7 @@ function custom_theme_customize_register($wp_customize) {
     )));
 }
 add_action('customize_register', 'custom_theme_customize_register');
+
+
 
 ?>
