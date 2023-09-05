@@ -103,6 +103,8 @@ function theme_footer_contact_customizer_settings($wp_customize) {
     }
 }
 
+add_action('customize_register', 'theme_footer_contact_customizer_settings');
+
 class Custom_Pricelist_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
