@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<h1><?= get_bloginfo('name') ?></h1>
+		<a href="../"><h1><?= get_bloginfo('name') ?></h1></a>
 		<nav>
 			<?php
 			wp_nav_menu(array(
