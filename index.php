@@ -8,12 +8,8 @@ get_header(); ?>
 
                  while ( have_posts() ) :
                     the_post();
-                endwhile;
-
-
-
-        
-        ?>
+                endwhile;        
+            ?>
 
             <aside class="sidebar">
                 <?php dynamic_sidebar('homepage-sidebar'); ?>
