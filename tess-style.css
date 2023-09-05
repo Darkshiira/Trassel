@@ -1,19 +1,20 @@
-
-body {
+body.page-template-default,
+body.home {
     background-color: rgb(194, 194, 194);
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
 }
 
-body>header {
+body.page-template-default>header,
+body.home>header {
     background-color: pink;
     color: inherit;
 }
 
 article>.wp-block-query>.wp-block-post-template {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 }
 
 article>.wp-block-query>.wp-block-post-template>a {
@@ -22,15 +23,15 @@ article>.wp-block-query>.wp-block-post-template>a {
 
 .wp-block-post {
     background-color: transparent;
-     display: flex;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
     border-radius: 10px;
-    margin:1rem;
+    margin: 1rem;
 }
 
-article> .wp-block-query> .wp-block-post-template> .wp-block-post> .wp-block-columns {
+article> .wp-block-post>.wp-block-columns {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -41,21 +42,20 @@ article> .wp-block-query> .wp-block-post-template> .wp-block-post> .wp-block-col
 
     border-radius: 10px 10px 0px 0px;
 }
-.wp-block-post-featured-image{
+
+.wp-block-post-featured-image {
+    overflow: hidden;
     overflow: hidden;
 }
 
-.wp-block-post-featured-image{
-     overflow: hidden;
-     max-height: 20%;
-     }
-
- .wp-block-post-title {
+.wp-block-post-title {
     padding-left: 1rem;
-} 
-.wp-block-group{
+}
+
+.wp-block-group {
     padding: 1rem;
 }
+
 .wp-block-post-date {
-   visibility: hidden;
+    visibility: hidden;
 }
