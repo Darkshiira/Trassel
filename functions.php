@@ -102,4 +102,29 @@ function theme_footer_contact_customizer_settings($wp_customize) {
         ));
     }
 }
+
 add_action('customize_register', 'theme_footer_contact_customizer_settings');
+
+class Custom_Pricelist_Widget extends WP_Widget {
+    public function __construct() {
+        parent::__construct(
+            'custom_pricelist_widget',
+            'Custom Pricelist Widget',
+            array('description' => 'Displays the custom pricelist table.')
+        );
+    }
+
+    public function widget($args, $instance) {
+        
+        include(get_template_directory() . '/template-parts/pricelist.php');
+        
+    }
+}
+
+function register_custom_pricelist_widget() {
+    register_widget('Custom_Pricelist_Widget');
+}
+add_action('widgets_init', 'register_custom_pricelist_widget');
+
+
+?>
