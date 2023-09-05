@@ -6,6 +6,7 @@ function mytheme_enqueue_styles()
 
     wp_enqueue_style('tess-style', get_template_directory_uri() . '/tess-style.css');
     wp_enqueue_style('aras-style', get_template_directory_uri() . '/aras-style.css');
+    wp_enqueue_style('june-style', get_template_directory_uri() . '/june-style.css');
 }
 
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
