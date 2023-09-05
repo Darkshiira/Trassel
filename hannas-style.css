@@ -128,9 +128,9 @@ body.home.blog{
 
     border-bottom: 0.1rem solid #454545;
 
-/*     &:last-child {
+    &:last-child {
         border-bottom: none;
-    } */
+    }
 
     
 }
