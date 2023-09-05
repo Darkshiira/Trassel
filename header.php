@@ -10,21 +10,24 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<h1><?= get_bloginfo('name') ?></h1>
-		<nav>
+		<div class="navbar">
+			<a href="../"><h1><?= get_bloginfo('name') ?></h1></a>
+			<nav>
+				<?php
+				wp_nav_menu(array(
+					'theme_location' => 'primary',
+					'menu_class' => 'primary-menu',
+				));
+				?>
+			</nav>
+		</div>
+		
+		<div id="hero">
 			<?php
-			wp_nav_menu(array(
-				'theme_location' => 'primary',
-				'menu_class' => 'primary-menu',
-			));
+				$custom_image_url = get_theme_mod('custom_image_setting');
+				if ($custom_image_url) {
+					echo '<img src="' . esc_url($custom_image_url) . '" alt="Custom Image">';
+				}
 			?>
-		</nav>
+		</div>
 	</header>
-	<div id="hero">
-		<?php
-			$custom_image_url = get_theme_mod('custom_image_setting');
-			if ($custom_image_url) {
-				echo '<img src="' . esc_url($custom_image_url) . '" alt="Custom Image">';
-			}
-		?>
-	</div>
