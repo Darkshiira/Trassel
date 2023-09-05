@@ -1,16 +1,4 @@
-body.page-template-default,
-body.home {
-    background-color: rgb(194, 194, 194);
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-}
 
-body.page-template-default>header,
-body.home>header {
-    background-color: pink;
-    color: inherit;
-}
 
 article>.wp-block-query>.wp-block-post-template {
     display: flex;
@@ -29,6 +17,7 @@ article>.wp-block-query>.wp-block-post-template>a {
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
     border-radius: 10px;
     margin: 1rem;
+    background-color: #c7c7c7;
 }
 
 article> .wp-block-post>.wp-block-columns {
