@@ -1,7 +1,27 @@
-/*
-Theme Name: Fancy Saloon Front
-Author: Hanna, Araceli, Fosiya, June and Terese.
-Version: 1.0
+
+
+body.page-template-default, .page  {
+    background-color: #454545;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body.page-template-default article h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wp-block-latest-posts a {
+    font-size: 1.5rem;
+    color: rgb(197, 15, 15);
+    text-decoration: none;
+}
+
+.wp-block-latest-posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 3rem;
+}
 
 */
 
@@ -45,9 +65,10 @@ body.page-template-default article h2 {
     
     
 }
+
 #main-feed{
     width: 75%;
-    background-color:#c7c7c7
+    background-color:#c7c7c7;
 }
 
 #pricelist {
@@ -63,8 +84,6 @@ body.page-template-default article h2 {
 #pricelist thead {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.3rem;
-    
-
 }
 
 
@@ -80,9 +99,9 @@ body.page-template-default article h2 {
 
     border-bottom: 0.1rem solid #454545;
 
-    &:last-child {
+/*     &:last-child {
         border-bottom: none;
-    }
+    } */
 
     
 }
