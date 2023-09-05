@@ -1,12 +1,35 @@
 
 
-body.page-template-default  {
+body.page-template-default {
     background-color: #454545;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+body.post-template-default {
+    background-color: #454545;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.post-template-default article {
+    background-color: #c7c7c7;
+    width: 90%;
+    text-align: center;
+}
+
+body.post-template-default article h2 {
+    font-size: 2rem;
 }
 
 body.page-template-default article {
     background-color: #c7c7c7;
+    width: 90%;
 }
 
 body.page-template-default article h2 {
