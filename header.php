@@ -20,3 +20,11 @@
 			?>
 		</nav>
 	</header>
+	<div id="hero">
+		<?php
+			$custom_image_url = get_theme_mod('custom_image_setting');
+			if ($custom_image_url) {
+				echo '<img src="' . esc_url($custom_image_url) . '" alt="Custom Image">';
+			}
+		?>
+	</div>

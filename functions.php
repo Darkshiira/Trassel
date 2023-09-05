@@ -126,5 +126,26 @@ function register_custom_pricelist_widget() {
 }
 add_action('widgets_init', 'register_custom_pricelist_widget');
 
+function custom_theme_customize_register($wp_customize) {
+    // Add a section for custom image
+    $wp_customize->add_section('custom_image_section', array(
+        'title' => 'Custom Image',
+        'priority' => 30,
+    ));
+
+    // Add a setting for the custom image
+    $wp_customize->add_setting('custom_image_setting', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+
+    // Add a control to upload/select the custom image
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_image_setting', array(
+        'label' => 'Upload/Select Custom Image',
+        'section' => 'custom_image_section',
+        'settings' => 'custom_image_setting',
+    )));
+}
+add_action('customize_register', 'custom_theme_customize_register');
 
 ?>
